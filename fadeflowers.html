@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <img src="flower1.jpg" alt="">
+        <img src="flower2.jpg" alt="">
+        <img src="flower3.jpg" alt="">
+        <img src="flower4.jpg" alt="">
+        <img src="flower5.jpg" alt="">
+
+    <script>
+        let myElements = document.querySelectorAll("img");
+            let c=0;
+        myElements.forEach(addClass);
+
+        function addClass(oneImg, index){
+            oneImg.addEventListener('click', imgClicked);
+        }
+
+        function imgClicked(evt){
+            console.log(evt.target);
+            evt.target.classList.toggle("stuff");
+            c++;
+            console.log(c);
+            if(c==5){
+                console.log("done");
+                c=0;
+                myElements.forEach(show);
+            }
+
+            function show(item, index){
+                item.classList.remove("stuff");
+                console.log("removing classes");
+            }
+        }
+
+
+
+        </script>
+
+    </body>
+</html>

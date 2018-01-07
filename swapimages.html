@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+
+    </head>
+    <body>
+
+    <img src="flower1.jpg" alt="">
+
+    <script>
+
+        let state='steam';
+        let myImage = document.querySelector("img");
+
+        let imageNumber = 1;
+        myImage.addEventListener('click', swapImageOnClick)
+
+        function swapImageOnClick(){
+            imageNumber++;
+            console.log("swap", imageNumber)
+
+            myImage.setAttribute('src', 'flower'+imageNumber+'.jpg')
+            if(imageNumber==4){
+            imageNumber=0;
+            }
+        }
+
+
+    /*
+        let state='steam';
+        let myImage = document.querySelector("img");
+        setInterval(swapImage, 2000)
+
+        function swapImage(){
+        //myImage.addEventListener('click', function(){//
+        console.log("state before: " + state);
+
+        if(state == 'steam'){
+        myImage.setAttribute("src", "flower1.jpg");
+            state='black';
+        }
+            else
+    if(state == 'black'){
+        myImage.setAttribute("src", "flower2.jpg");
+        state='steam';
+    }
+    console.log("state after: " + state);
+
+    }
+*/
+
+     </script>
+    </body>
+</html>
+
+
+
